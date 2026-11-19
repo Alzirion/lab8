@@ -10,6 +10,9 @@ services:
     volumes:
       - ./prometheus:/etc/prometheus
       - prom_data:/prometheus
+    networks:
+      - default
+      - devopscompose_default
   grafana:
     image: grafana/grafana
     container_name: grafana
